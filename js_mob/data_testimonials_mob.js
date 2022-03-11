@@ -33,7 +33,6 @@ const peopleMob = [
 },
 {
     nameMob: "Izabela Walczewska-Schneyder",
-    jobMob: "zawod??",
     textMob: `"Pan Wojciech jest doskonałym specjalistą i potrafi pomóc w każdych problemach związanych z kręgosłupem. Regularne korzystanie z jego usług pozwala mi na zachowanie dobrej kondycji kręgosłupa. Polecam!!!"`,
     numberMob: "6/7",
 },
