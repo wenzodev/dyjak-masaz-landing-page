@@ -40,4 +40,4 @@ function moveToPrevSlide() {
     updateSlidePosition()
 }
 
-setInterval(moveToNextSlide, 10000)
+setInterval(moveToNextSlide, 20000)
