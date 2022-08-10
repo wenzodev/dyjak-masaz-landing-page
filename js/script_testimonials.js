@@ -18,9 +18,9 @@ if(slideIndex === people.length -1){
   position = 'last'
 }
 return ` <article class="slide ${position}">
+<p class="text">${text}</p>
 <h4>${name}</h4>
 <p class="title">${job}</p>
-<p class="text">${text}</p>
 <p class="text2">${number}</p>
 <div class="quote-icon">
   <div class="fas faquote-right"></div>
@@ -47,7 +47,7 @@ const startSlider = (type) => {
     next = container.lastElementChild
   }
   next.classList.remove(['next'])
-   next.classList.add('last')
+   next.classList.add(['last'])
    return
  }
 

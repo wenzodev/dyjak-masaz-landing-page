@@ -5,8 +5,8 @@ Variables
 */
 
 :root {
-  --primary-color: #333;
-  --secondary-color: #444;
+  --primary-color: rgba(206, 100, 206, 1);
+  --secondary-color: rgba(206, 100, 206, .9);
   --overlay-color: rgba(0, 0, 0, 0.7);
   --blue-color: rgba(41, 99, 177, 1);
 }
@@ -49,19 +49,19 @@ img {
 
 h4 {
   font-weight: 500;
-  color: rgba(252, 48, 252, 0.7);
+  color: var(--primary-color);
   letter-spacing: 0.1rem;
   margin-top: 0.5rem;
   margin-left: 0rem;
 }
 
-h4.quote_person {
-  margin-left: 10rem;
-}
-
 .pad {
   margin-top: 0.8rem;
   margin-bottom: 0.3rem;
+}
+
+.pad2 {
+  margin-top: 1.5rem;
 }
 
 .bold {
@@ -70,6 +70,10 @@ h4.quote_person {
 
 .s-25 {
   font-size: 25px;
+}
+
+.pc {
+  color: var(--primary-color);
 }
 
 /*
@@ -98,18 +102,18 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: .5fr .5fr .5fr;
   row-gap: 0rem;
-  background: url('../img/flower_mosaic9.jpg') no-repeat center center;
-
+  background: rgb(255,255,255);
+  background: linear-gradient(45deg, rgba(255,255,255,0.5) 0%, rgba(249,225,252,0.5) 40%, rgba(249,129,249,0.22) 60%, rgba(249,225,251,0.9) 78%, rgba(255,255,255,0.9) 100%);
   /*display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;*/
 }
 
-header.logo {
+header .logo {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  margin-left: 1rem;
 }
 
 header h1 {
@@ -125,10 +129,11 @@ header h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.title-job {
+p.title-job {
   letter-spacing: 2px;
   text-transform: capitalize;
   font-size: 0.8rem;
+  font-style: italic;
 }
 
 header h1.gabinet {
@@ -145,35 +150,19 @@ header h2 {
   color: rgba(206, 100, 206, 0.9);
 }
 
-header p {
-  width: 90%;
-  font-size: 1rem;
-  font-style: italic;
-  justify-self: center;
-  line-height: 1.5rem;
-}
-
-header.quote {
-  max-width: 18rem;
-  margin-left: 12rem;
-}
-
 header i {
   font-size: 2rem;
   color: rgba(220, 150, 220, 0.3);
 }
 
-.fa-quote {
-  color: rgba(220, 150, 220, 0.3);
-  font-size: 2rem;
+header .quote {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 0 5rem; /* top-right-bottom-left */
 }
 
-.fa-quote-right {
-  margin-left: 0;
-}
-
-.fa-quote-left {
-  margin-left: 5rem;
+header .quote p.text {
+  margin: 0;
 }
 
 /* Container */
@@ -187,7 +176,7 @@ header i {
   grid-template-rows: 1fr 1fr;
   column-gap: 0rem;
   row-gap: 4rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -203,7 +192,12 @@ header i {
 
 /* BOX-1: About */
 .box-1 p {
+  font-size: 0.9rem;
   line-height: 2rem;
+}
+
+.box-1 h2 {
+  text-align: center;
 }
 
 /* BOX-2: Slider-Services */
@@ -213,20 +207,49 @@ header i {
 
 .box-2 .carousel p {
   line-height: 2rem;
+  font-size: 0.9rem;
+  margin-top: 0.9rem;
 }
 
 .box-2 h2 {
-  margin-left: 1rem;
   margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+button.ph {
+  border-radius: 10rem;
+  background-color: yellow;
+}
+
+button.ph2{
+  border-radius: 10rem;
+  background-color: violet;
+}
+
+button.ph3{
+  border-radius: 10rem;
+  background-color: orangered;
+}
+
+button.ph:hover, button.ph2:hover, button.ph3:hover {
+  background-color: #fff;
 }
 
 .carousel {
   overflow: hidden;
 }
 
-.carousel_item {
+.box-2 .carousel_item {
   display: flex;
   flex-direction: column;
+}
+
+.carousel .oferta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .carousel_item p,
@@ -298,6 +321,15 @@ header i {
   border: 0;
   font-weight: bold;
   cursor: pointer;
+  background-color: #f0f0f0;
+  color: gray;
+  border: 0.2rem solid #fcdeff;
+}
+
+.carousel .carousel_actions button:hover {
+  background-color: #fff;
+  color: #333;
+  border-color: #f7c1fc;
 }
 
 .carousel .carousel_actions button#carousel_button--next {
@@ -324,12 +356,16 @@ header i {
 
 /*
 =============== 
-BOX-3: Slider Styles
+BOX-3: Slider Reviews
 ===============
 */
 
 .box-3 {
   position: relative;
+}
+
+.box-3 h2 {
+  text-align: center;
 }
 
 .title {
@@ -401,7 +437,7 @@ BOX-3: Slider Styles
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 0;
+  top: .8rem;
   left: 0;
   bottom: 0;
   right: 0;
@@ -432,28 +468,39 @@ BOX-4: Images
 ===============
 */
 
+.box-4 {
+  overflow-y: auto;
+}
+
+.box-4 h2 {
+  text-align: center;
+}
+
 .cont-centered {
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: .5rem; 
 }
 
 .box-4 img {
-  max-width: 60%;
+  max-width: 50%;
   margin-top: 0.5rem;
   margin-bottom: 0.1rem;
 }
 
 .box-4 p {
+  font-size: 0.9rem;
   max-width: 18rem;
   line-height: 1.4rem;
 }
 
-.opis {
+p.opis {
   margin: 0;
   padding: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: right;
 }
 
@@ -467,8 +514,9 @@ footer {
   width: 100%;
   height: 2rem;
   background-color: transparent;
-  margin-top: 3rem;
+  margin-top: 1rem;
   text-align: center;
+  font-size: 0.7rem;
 }
 
 /*
@@ -499,8 +547,36 @@ display: none for mobile elements
 
 /* Mobile & Tablets Screens max 1000px */
 @media screen and (max-width: 62.5rem) {
+  header {
+    margin-bottom: 2rem;
+  }
+  
   .content {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+    margin: 0;
+  }
+
+  .content > div {
+    height: auto;
+  }
+
+  .content .box-1 {
+    width: 90%;
+    height: auto;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content .box-1 p {
+    max-width: 75%;
+  }
+
+  .carousel .one h2, .carousel .two h2, .carousel .three h2 {
+    margin-top: 1rem;
   }
 
   .box-4 p {
@@ -509,10 +585,32 @@ display: none for mobile elements
   }
 }
 
+/* Mobile & Tablets Screens max 820px */
+@media screen and (max-width: 51.25rem) {
+  header .quote {
+    margin-left: 5rem;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  header h2 {
+    margin: 3.5rem 0 2rem 0;
+  }
+}
+
 /* Mobile Screens max 599px*/
 @media screen and (max-width: 37.4375rem) {
   body {
     padding: 0;
+  }
+  
+  .desktop {
+    display:none;
+  }
+
+  .pad {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
   }
 
   #main-container {
@@ -528,13 +626,14 @@ display: none for mobile elements
     row-gap: 2rem;
   }
 
+  /* HEADER */
   header {
     width: 100%;
     height: 100%;
     background-color: none;
-    padding: 1rem;
+    padding: 2rem;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     /*grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     row-gap: 1rem;*/
@@ -543,6 +642,12 @@ display: none for mobile elements
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+
+  header .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   header h1.gabinet {
@@ -561,168 +666,69 @@ display: none for mobile elements
     line-height: 1.5rem;
   }
 
-  header > div {
+  header .quote {
     display: none;
   }
 
-  .content > div {
+  /* CONTENT */
+  .content > div { 
     width: 100%;
-    height: auto; /* 30rem */
+    height: auto;
     overflow: visible;
     margin-bottom: 0;
   }
-
+  
+/* BOX-1 */
   .box-1 {
     padding-bottom: 1rem;
   }
 
-  .box-3 {
-    display: none;
-  }
-
-  .box-opinie-mob {
+  .box-1 p.mobile {
     display: block;
-    position: relative;
-    width: 100%;
-    height: 40rem;
-    padding: 0rem;
+  }
+  
+  .content .box-1 p {
+    max-width: 90%;
   }
 
-  .btn-mob {
-    position: absolute;
-    top: 0%;
-    background-color: #f0f0f0;
-    color: gray;
-    padding: 0.4rem 0.6rem;
-    border: 0.2rem solid #f9e1fb;
-    border-radius: 50%;
-    cursor: pointer;
-    outline: none;
+  /* BOX-2 */
+.carousel p.mobile {
+  display: block;
+}
+
+.carousel .carousel_actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .3rem;
+  margin: 0;
+  position: absolute;
+  top: 6%;
+  transform: translateY(-50%);
+}
+
+/* BOX-3 */
+  .slide-container {
+    top: 2rem;
+    height: 34rem;
+    z-index: 100;
   }
 
-  .next-btn-mob {
+  .slide {
+    top: 1rem;
+    text-align: center;
+  }
+
+  .text2 {
+    margin-top: 0rem;
+  }
+
+  .next-btn {
     top: 2%;
     right: 2%;
   }
-  .prev-btn-mob {
+  .prev-btn {
     top: 2%;
     left: 2%;
-  }
-
-  .pad,
-  .pad-mob {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-  }
-
-  .text-mob {
-    color: var(--clr-grey-5);
-    line-height: 1.7;
-    max-width: 95%;
-    margin-top: 0rem;
-    letter-spacing: 0px;
-    font-size: 0.9rem;
-  }
-
-  .text2-mob {
-    margin-top: 0.25rem;
-  }
-
-  h4 .mob {
-    font-weight: 500;
-    color: rgba(252, 48, 252, 0.7);
-    letter-spacing: 0.1rem;
-    margin-top: 8rem;
-    margin-left: 0.8rem;
-  }
-
-  .title-mob {
-    margin-bottom: 1.25rem;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    font-size: 0.8rem;
-  }
-
-  .slider-mob {
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: space-between;
-  }
-
-  .content > .box-opinie-mob {
-    background-color: rgba(209, 151, 209, 0.1);
-  }
-
-  /* MORE CSS FOR JS - Mob */
-  .slide-container-mob {
-    display: flex;
-    position: relative;
-    width: 100%; /* from box width */
-    height: 30rem; /* height is important for absolute elements */
-    overflow: hidden;
-    margin-top: 0.8rem;
-  }
-
-  .slide-mob {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .slide.active-mob {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .slide.next-mob {
-    transform: translateX(100%);
-  }
-
-  .slide.last-mob {
-    transform: translateX(-100%);
-  }
-
-  /* Show More */
-  .description-mob {
-    display: block;
-  }
-
-  .expandMoreHolder {
-    display: block;
-  }
-
-  .expandMoreContent {
-    height: 24rem;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
-    position: relative;
-  }
-
-  .carousel_item .desktop {
-    display: none;
-  }
-
-  .box-1 .desktop {
-    display: none;
-  }
-
-  .carousel_item .mobile {
-    display: block;
-  }
-
-  .box-1 .mobile {
-    display: block;
   }
 }
