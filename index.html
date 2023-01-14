@@ -22,6 +22,12 @@
   <script src="https://kit.fontawesome.com/4567da45f4.js" crossorigin="anonymous"></script>
   <!-- stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+  <script defer type="module">
+    import initGallery from "./js/modal-gallery.js"
+    initGallery('./data/modal-gallery.json', {
+      speed: 1200
+    })
+  </script>
   <title>Masaże w Warszawie-Wojciech Dyjak</title>
 </head>
 
@@ -189,25 +195,35 @@
         </button>
       </div>
       <div class="box-4">
-        <h2 class="pad">nowości</h2>
-        <div class="cont-centered">
-          <p>W 2020 roku brałem udział przy produkcji filmu: "Śniegu już nigdy nie będzie". Moją wiedzę i doświadczenie
-            nt. masażu przekazałem głównemu aktorowi filmu: Alecowi Utgoffowi.</p>
-          <img src="img/movie-interia.jpg">
-          <p class="opis">foto: interia.pl</p>
-          </img>
-          <p class="pad2">Stół do masażu, który był wykorzystany w filmie wraz z podpisami aktorów, przeznaczam na cel
-            charytatywny.</p>
-          <img src="img/table-2.jpg">
-          </img>
-          <p class="opis">foto: Wojciech Dyjak</p>
+        <div class="image-container">
+          <button class="image-item" data-modal="true" data-gallery="Reviews" aria-label="Open Reviews Image Gallery">
+            <span>Zaufali mi</span>
+            <!-- <ul>
+              <li>Bartosz Kowalski</li>
+              <li>Marzena Buczyńska</li>
+              <li>xxx</li>
+              <li>Paweł Pawlikowski</li>
+              <li>Jerzy Łukaszewicz</li>
+              <li>Michał Englert</li>
+              <li>Margita </li>
+              <li>Aleksandra</li>
+              <li>Krzysztof Knurek</li>
+              <li>Talia Ryder</li>
+              <li>Jerzy Łukaszewicz</li>
+              <li>Jerzy Łukaszewicz</li>
+              <li>Jerzy Łukaszewicz</li>
+              <li>Jerzy Łukaszewicz</li>
+              <li>Jerzy Łukaszewicz</li>
+            </ul> -->
+          </button>
         </div>
       </div>
     </div>
     <!--content-->
   </div>
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2022 Wojciech Dyjak</p>
+    &copy;<h5 id="displayYear"></h5> Wojciech Dyjak
   </footer>
   <script type="module" src="js/script_testimonials.js"></script>
   <script src="js/script.js"></script>

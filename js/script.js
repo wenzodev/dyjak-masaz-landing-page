@@ -4,35 +4,35 @@ const totalSlides = slides.length
 
 // target the right element of the DOM
 document.getElementById('carousel_button--next')
-.addEventListener("click", function(){
-    moveToNextSlide()
-})
+    .addEventListener("click", function () {
+        moveToNextSlide()
+    })
 
 document.getElementById('carousel_button--prev')
-.addEventListener("click", function(){
-    moveToPrevSlide()
-})
+    .addEventListener("click", function () {
+        moveToPrevSlide()
+    })
 
 function updateSlidePosition() {
     for (let slide of slides) {
-       slide.classList.remove('carousel_item--visible')
-       slide.classList.add('carousel_item--hidden')
+        slide.classList.remove('carousel_item--visible')
+        slide.classList.add('carousel_item--hidden')
     }
     slides[slidePosition].classList.add('carousel_item--visible')
 }
 
 function moveToNextSlide() {
-    if(slidePosition === totalSlides - 1) {
+    if (slidePosition === totalSlides - 1) {
         slidePosition = 0
     } else {
         slidePosition++
     }
     updateSlidePosition()
-}  
+}
 
 function moveToPrevSlide() {
-    
-    if(slidePosition === 0) {
+
+    if (slidePosition === 0) {
         slidePosition = totalSlides - 1
     } else {
         slidePosition--
@@ -41,3 +41,10 @@ function moveToPrevSlide() {
 }
 
 setInterval(moveToNextSlide, 20000)
+
+// get full year for the footer
+
+const d = new Date();
+let year = d.getFullYear();
+
+document.getElementById('displayYear').innerHTML = year;

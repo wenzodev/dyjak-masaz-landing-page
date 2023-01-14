@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Reviews",
+        "images": [
+            {
+                "src": "./img/opinia-1.jpg",
+                "alt": "first"
+            },
+            {
+                "src": "./img/opinia-2.jpg",
+                "alt": "second"
+            },
+            {
+                "src": "./img/opinia-3.jpg",
+                "alt": "cherries"
+            },
+            {
+                "src": "./img/opinia-4.jpg",
+                "alt": "orange"
+            },
+            {
+                "src": "./img/opinia-5.jpg",
+                "alt": "melon"
+            },
+            {
+                "src": "./img/opinia-6.jpg",
+                "alt": "avacado"
+            },
+            {
+                "src": "./img/opinia-7.jpg",
+                "alt": "blueberries"
+            },
+            {
+                "src": "./img/opinia-8.jpg",
+                "alt": "blueberries"
+            },
+            {
+                "src": "./img/opinia-9.jpg",
+                "alt": "blueberries"
+            },
+            {
+                "src": "./img/opinia-13.jpg",
+                "alt": "blueberries"
+            },
+            {
+                "src": "./img/opinia-14.jpg",
+                "alt": "blueberries"
+            }
+        ]
+    }
+]
