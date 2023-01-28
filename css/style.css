@@ -174,6 +174,57 @@ header .middle {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+header .middle h5 {
+  font-size: 1.1rem;
+  padding: .5rem 0;
+}
+
+header .middle h5 span {
+  display: block;
+}
+
+header .middle h5 span:nth-child(1) {
+  padding-top: 1rem;
+}
+
+header .middle h5 i {
+  font-size: 1.5rem;
+  padding-left: 3rem;
+  color: white;
+}
+
+header .middle .wosp-logo-title {
+  width: 400px;
+  height: 94px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--primary-color);
+  padding: 0 .5rem;
+}
+
+header .middle .wosp-allegro {
+  background-image: url("/img/wosp-allegro.jpg");
+  width: 136px;
+  /* can do it with property for img in global styling */
+  height: 94px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  opacity: 1;
+}
+
+header .middle .video-container {
+  width: 400px;
+  height: 225px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 1rem;
 }
 
 header .middle span {
