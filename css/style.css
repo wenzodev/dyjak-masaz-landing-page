@@ -208,7 +208,7 @@ header .middle .wosp-logo-title {
 }
 
 header .middle .wosp-allegro {
-  background-image: url("/img/wosp-allegro.jpg");
+  background-image: url("/img2/wosp-allegro.jpg");
   width: 136px;
   /* can do it with property for img in global styling */
   height: 94px;
@@ -1111,5 +1111,10 @@ display: none for mobile elements
   .prev-btn {
     top: 2%;
     left: 2%;
+  }
+
+  /* BOX-4 */
+  .box-4 {
+    display: none;
   }
 }
