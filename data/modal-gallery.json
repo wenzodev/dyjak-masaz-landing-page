@@ -12,39 +12,39 @@
             },
             {
                 "src": "./img/opinia-3.jpg",
-                "alt": "cherries"
+                "alt": "third"
             },
             {
                 "src": "./img/opinia-4.jpg",
-                "alt": "orange"
+                "alt": "fourth"
             },
             {
                 "src": "./img/opinia-5.jpg",
-                "alt": "melon"
+                "alt": "fifth"
             },
             {
                 "src": "./img/opinia-6.jpg",
-                "alt": "avacado"
+                "alt": "sixth"
             },
             {
                 "src": "./img/opinia-7.jpg",
-                "alt": "blueberries"
+                "alt": "seventh"
             },
             {
                 "src": "./img/opinia-8.jpg",
-                "alt": "blueberries"
+                "alt": "eighth"
             },
             {
                 "src": "./img/opinia-9.jpg",
-                "alt": "blueberries"
+                "alt": "nineth"
             },
             {
                 "src": "./img/opinia-13.jpg",
-                "alt": "blueberries"
+                "alt": "tenth"
             },
             {
                 "src": "./img/opinia-14.jpg",
-                "alt": "blueberries"
+                "alt": "eleventh"
             }
         ]
     }
