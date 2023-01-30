@@ -1112,4 +1112,9 @@ display: none for mobile elements
     top: 2%;
     left: 2%;
   }
+
+  .box-4 {
+    display: none;
+  }
+
 }
