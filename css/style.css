@@ -179,21 +179,16 @@ header .middle {
 
 header .middle h5 {
   font-size: 1.1rem;
-  padding: .5rem 0;
+  padding: .5rem;
 }
 
 header .middle h5 span {
-  display: block;
+  font-style: italic;
+  font-weight: bold;
 }
 
 header .middle h5 span:nth-child(1) {
-  padding-top: 1rem;
-}
-
-header .middle h5 i {
-  font-size: 1.5rem;
-  padding-left: 3rem;
-  color: white;
+  margin-top: .2rem;
 }
 
 header .middle .wosp-logo-title {
@@ -202,9 +197,8 @@ header .middle .wosp-logo-title {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: var(--primary-color);
-  padding: 0 .5rem;
 }
 
 header .middle .wosp-allegro {
